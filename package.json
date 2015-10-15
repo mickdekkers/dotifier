@@ -30,7 +30,7 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "test": "node node_modules/semistandard/bin/cmd.js && node_modules\\.bin\\mocha --reporter spec --ui bdd"
+    "test": "node node_modules/semistandard/bin/cmd.js && mocha --reporter spec --ui bdd"
   },
   "dependencies": {
     "validator": "^4.1.0"
