@@ -26,6 +26,16 @@ console.log(dotifier.encode('examplegmail@gmail.com', 1337));
 //=> 'e.xa.mpl.e.g.mai.l@gmail.com'
 ```
 
+> Gmail doesn't recognize dots as characters within usernames, you can add or remove the dots from a Gmail address without changing the actual destination address:
+>
+> - homerjsimpson@gmail.com = hom.er.j.sim.ps.on@gmail.com
+> - homerjsimpson@gmail.com = HOMERJSIMPSON@gmail.com
+> - homerjsimpson@gmail.com = Homer.J.Simpson@gmail.com
+>
+> All these addresses belong to the same person. You can see this if you try to sign in with your username, but adding or removing a dot from it. You'll still go to your account.
+
+[Source](https://support.google.com/mail/answer/10313)
+
 ## API
 
 ### encode(email, integer)
