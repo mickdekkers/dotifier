@@ -14,7 +14,7 @@ $ npm install --save dotifier
 
 ```js
 // example.js
-var dotifier = require('./index.js');
+var dotifier = require('dotifier');
 
 console.log(dotifier.encode('examplegmail@gmail.com', 1));
 //=> 'examplegmai.l@gmail.com'
