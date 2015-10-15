@@ -1,0 +1,23 @@
+{
+  "name": "dotifier",
+  "version": "1.0.0",
+  "description": "Encode an integer into a Gmail address using dots",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "soullesswaffle/dotifier",
+  "author": "Soullesswaffle",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "test": "node node_modules/semistandard/bin/cmd.js && node_modules\\.bin\\mocha --reporter spec --ui bdd"
+  },
+  "dependencies": {
+    "validator": "^4.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3",
+    "semistandard": "^7.0.2"
+  }
+}
