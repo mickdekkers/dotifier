@@ -12,13 +12,13 @@
     "steganography",
     "stego"
   ],
-  "homepage": "https://github.com/soullesswaffle/dotifier#readme",
+  "homepage": "https://github.com/SoullessWaffle/dotifier#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/soullesswaffle/dotifier.git"
+    "url": "https://github.com/SoullessWaffle/dotifier.git"
   },
   "bugs": {
-    "url": "https://github.com/soullesswaffle/dotifier/issues"
+    "url": "https://github.com/SoullessWaffle/dotifier/issues"
   },
   "author": "Soullesswaffle",
   "contributors": [{

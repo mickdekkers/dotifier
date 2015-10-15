@@ -1,4 +1,4 @@
-# dotifier [![Build Status](https://travis-ci.org/soullesswaffle/dotifier.svg?branch=master)](https://travis-ci.org/soullesswaffle/dotifier) [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
+# dotifier [![Build Status](https://travis-ci.org/SoullessWaffle/dotifier.svg?branch=master)](https://travis-ci.org/SoullessWaffle/dotifier) [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
 
 > Encode an integer into a Gmail address using dots
 
