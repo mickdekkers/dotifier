@@ -3,9 +3,29 @@
   "version": "1.0.0",
   "description": "Encode an integer into a Gmail address using dots",
   "license": "MIT",
-  "main": "index.js",
-  "repository": "soullesswaffle/dotifier",
+  "keywords": [
+    "gmail",
+    "google",
+    "email",
+    "binary",
+    "encode",
+    "steganography",
+    "stego"
+  ],
+  "homepage": "https://github.com/soullesswaffle/dotifier#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soullesswaffle/dotifier.git"
+  },
+  "bugs": {
+    "url": "https://github.com/soullesswaffle/dotifier/issues"
+  },
   "author": "Soullesswaffle",
+  "contributors": [{
+    "name": "Soullesswaffle",
+    "email": "soullesswaffle@gmail.com"
+  }],
+  "main": "index.js",
   "engines": {
     "node": ">=4.0.0"
   },
