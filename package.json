@@ -1,6 +1,6 @@
 {
   "name": "dotifier",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Encode an integer into a Gmail address using dots",
   "license": "MIT",
   "keywords": [
