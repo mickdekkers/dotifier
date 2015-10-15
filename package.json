@@ -1,6 +1,6 @@
 {
   "name": "dotifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Encode an integer into a Gmail address using dots",
   "license": "MIT",
   "keywords": [
@@ -21,10 +21,12 @@
     "url": "https://github.com/SoullessWaffle/dotifier/issues"
   },
   "author": "Soullesswaffle",
-  "contributors": [{
-    "name": "Soullesswaffle",
-    "email": "soullesswaffle@gmail.com"
-  }],
+  "contributors": [
+    {
+      "name": "Soullesswaffle",
+      "email": "soullesswaffle@gmail.com"
+    }
+  ],
   "main": "index.js",
   "engines": {
     "node": ">=4.0.0"
