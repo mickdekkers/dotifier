@@ -5,6 +5,20 @@ var dotifier = require('./index.js');
 
 describe('dotifier', function () {
   describe('._splitMail()', function () {
+    it('should return [\'test\', \'@gmail.com\'] for test@gmail.com', function () {
+      var result = dotifier._splitMail('test@gmail.com');
+      expect(result).to.be.an.instanceof(Array);
+      expect(result).to.have.length(2);
+      expect(result[0]).to.equal('test');
+      expect(result[1]).to.equal('@gmail.com');
+    });
+    it('should return [\'hello\', \'@gmail.com\'] for hello@gmail.com', function () {
+      var result = dotifier._splitMail('hello@gmail.com');
+      expect(result).to.be.an.instanceof(Array);
+      expect(result).to.have.length(2);
+      expect(result[0]).to.equal('hello');
+      expect(result[1]).to.equal('@gmail.com');
+    });
     it('should return [\'example\', \'@gmail.com\'] for example@gmail.com', function () {
       var result = dotifier._splitMail('example@gmail.com');
       expect(result).to.be.an.instanceof(Array);
@@ -14,13 +28,25 @@ describe('dotifier', function () {
     });
   });
   describe('._getCapacity()', function () {
+    it('should return 7 for \'test\'.length', function () {
+      expect(dotifier._getCapacity('test'.length)).to.equal(7);
+    });
+    it('should return 15 for \'hello\'.length', function () {
+      expect(dotifier._getCapacity('hello'.length)).to.equal(15);
+    });
     it('should return 63 for \'example\'.length', function () {
       expect(dotifier._getCapacity('example'.length)).to.equal(63);
     });
   });
   describe('._binRep()', function () {
     it('should return \'000001\' when n = 1', function () {
+      expect(dotifier._binRep(1, 'example')).to.equal('000001');
+    });
+    it('should return \'001010\' when n = 10', function () {
       expect(dotifier._binRep(10, 'example')).to.equal('001010');
+    });
+    it('should return \'001111\' when n = 15', function () {
+      expect(dotifier._binRep(15, 'example')).to.equal('001111');
     });
   });
   describe('.encode()', function () {
