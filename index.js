@@ -41,5 +41,19 @@ module.exports = {
 
     // return the result as a valid email address
     return result + email[1];
+  },
+  decode: function (email) {
+    if (!validator.isEmail(email)) return null;
+    var local = this._splitMail(email)[0];
+    // local length needs to be > 2 to contain anything
+    if (local.length <= 2) return 0;
+
+    var result = '';
+    for (var i = 0; i < local.length - 2; i++) {
+      if (validator.isAlpha(local[i])) {
+        result += (local[i + 1] === '.') ? '1' : '0';
+      }
+    }
+    return parseInt(result, 2);
   }
 };

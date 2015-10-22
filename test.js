@@ -115,4 +115,25 @@ describe('dotifier', function () {
       });
     });
   });
+  describe('.decode()', function () {
+    describe('valid input', function () {
+      it('should return 0 for example@gmail.com', function () {
+        expect(dotifier.decode('example@gmail.com')).to.equal(0);
+      });
+      it('should return 1 for exampl.e@gmail.com', function () {
+        expect(dotifier.decode('exampl.e@gmail.com')).to.equal(1);
+      });
+      it('should return 63 for e.x.a.m.p.l.e@gmail.com', function () {
+        expect(dotifier.decode('e.x.a.m.p.l.e@gmail.com')).to.equal(63);
+      });
+    });
+    describe('invalid input', function () {
+      it('should return null when email is invalid', function () {
+        expect(dotifier.decode('examplegmail.com')).to.be.null;
+        expect(dotifier.decode('@l.com')).to.be.null;
+        expect(dotifier.decode('e@')).to.be.null;
+        expect(dotifier.decode('@')).to.be.null;
+      });
+    });
+  });
 });

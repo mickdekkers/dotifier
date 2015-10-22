@@ -24,6 +24,16 @@ console.log(dotifier.encode('examplegmail@gmail.com', 9));
 
 console.log(dotifier.encode('examplegmail@gmail.com', 1337));
 //=> 'e.xa.mpl.e.g.mai.l@gmail.com'
+
+
+console.log(dotifier.decode('examplegmai.l@gmail.com'));
+//=> 1
+
+console.log(dotifier.decode('exampleg.mai.l@gmail.com'));
+//=> 9
+
+console.log(dotifier.decode('e.xa.mpl.e.g.mai.l@gmail.com'));
+//=> 1337
 ```
 
 > Gmail doesn't recognize dots as characters within usernames, you can add or remove the dots from a Gmail address without changing the actual destination address:
@@ -55,6 +65,17 @@ Gmail address to use.
 Type: `number`
 
 Integer to encode.
+
+### decode(email)
+
+Returns an integer, or null if the input is invalid.
+
+#### email
+
+*Required*  
+Type: `string`
+
+Gmail address to decode.
 
 ## License
 
