@@ -40,7 +40,7 @@ console.log(dotifier.encode('examplegmail@gmail.com', 1337));
 
 ### encode(email, integer)
 
-Returns a string.
+Returns a string, or null if the input is invalid.
 
 #### email
 
