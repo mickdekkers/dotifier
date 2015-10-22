@@ -48,13 +48,14 @@ All these addresses belong to the same person. You can test this yourself if you
 [Source](https://support.google.com/mail/answer/10313)
 
 By treating a dot as a `1` and the absence of a dot as a `0`, we can store an arbitrary binary number in a Gmail address and later retrieve it:
-- `0`  = `0b0`      = `example@gmail.com`
-- `1`  = `0b1`      = `exampl.e@gmail.com`
-- `2`  = `0b10`     = `examp.le@gmail.com`
-- `3`  = `0b11`     = `examp.l.e@gmail.com`
-- `10` = `0b1010`   = `exa.mp.le@gmail.com`
-- `43` = `0b101011` = `e.xa.mp.l.e@gmail.com`
-etc.
+```
+0  = 0b0      = example@gmail.com
+1  = 0b1      = exampl.e@gmail.com
+2  = 0b10     = examp.le@gmail.com
+3  = 0b11     = examp.l.e@gmail.com
+10 = 0b1010   = exa.mp.le@gmail.com
+43 = 0b101011 = e.xa.mp.l.e@gmail.com
+```
 
 ## API
 
