@@ -1,4 +1,4 @@
-# dotifier [![Build Status](https://travis-ci.org/SoullessWaffle/dotifier.svg?branch=master)](https://travis-ci.org/SoullessWaffle/dotifier) [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
+# dotifier [![Build Status](https://img.shields.io/travis/SoullessWaffle/dotifier.svg?style=flat-square)](https://travis-ci.org/SoullessWaffle/dotifier)[![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
 
 > Encode an integer into a Gmail address using dots
 
@@ -36,15 +36,25 @@ console.log(dotifier.decode('e.xa.mpl.e.g.mai.l@gmail.com'));
 //=> 1337
 ```
 
-> Gmail doesn't recognize dots as characters within usernames, you can add or remove the dots from a Gmail address without changing the actual destination address:
->
-> - homerjsimpson@gmail.com = hom.er.j.sim.ps.on@gmail.com
-> - homerjsimpson@gmail.com = HOMERJSIMPSON@gmail.com
-> - homerjsimpson@gmail.com = Homer.J.Simpson@gmail.com
->
-> All these addresses belong to the same person. You can see this if you try to sign in with your username, but adding or removing a dot from it. You'll still go to your account.
+## How it works
 
+Gmail doesn't recognize dots as characters within usernames, meaning you can add or remove dots from a Gmail address without changing the actual destination address:
+```
+hom.er.j.sim.ps.on@gmail.com = homerjsimpson@gmail.com
+HOMERJSIMPSON@gmail.com      = homerjsimpson@gmail.com
+Homer.J.Simpson@gmail.com    = homerjsimpson@gmail.com
+```
+All these addresses belong to the same person. You can test this yourself if you try to sign in with your username with a dot removed or added to it. You'll still sign in to your account.
 [Source](https://support.google.com/mail/answer/10313)
+
+By treating a dot as a `1` and the absence of a dot as a `0`, we can store an arbitrary binary number in a Gmail address and later retrieve it:
+- `0`  = `0b0`      = `example@gmail.com`
+- `1`  = `0b1`      = `exampl.e@gmail.com`
+- `2`  = `0b10`     = `examp.le@gmail.com`
+- `3`  = `0b11`     = `examp.l.e@gmail.com`
+- `10` = `0b1010`   = `exa.mp.le@gmail.com`
+- `43` = `0b101011` = `e.xa.mp.l.e@gmail.com`
+etc.
 
 ## API
 
