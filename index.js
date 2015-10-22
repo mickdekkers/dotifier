@@ -49,7 +49,7 @@ module.exports = {
     if (local.length <= 2) return 0;
 
     var result = '';
-    for (var i = 0; i < local.length - 2; i++) {
+    for (var i = 0; i < local.length - 1; i++) {
       if (validator.isAlpha(local[i])) {
         result += (local[i + 1] === '.') ? '1' : '0';
       }
