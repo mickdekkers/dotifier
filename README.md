@@ -19,7 +19,7 @@ var dotifier = require('dotifier');
 console.log(dotifier.encode('examplegmail@gmail.com', 1));
 //=> 'examplegmai.l@gmail.com'
 
-console.log(dotifier.encode('examplegmail@gmail.com', 5));
+console.log(dotifier.encode('examplegmail@gmail.com', 9));
 //=> 'exampleg.mai.l@gmail.com'
 
 console.log(dotifier.encode('examplegmail@gmail.com', 1337));
