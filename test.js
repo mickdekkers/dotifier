@@ -19,7 +19,7 @@ describe('dotifier', function () {
     });
   });
   describe('._binRep()', function () {
-    it('should return 001010 when n = 10', function () {
+    it('should return \'000001\' when n = 1', function () {
       expect(dotifier._binRep(10, 'example')).to.equal('001010');
     });
   });
