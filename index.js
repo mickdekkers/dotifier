@@ -1,15 +1,15 @@
 var validator = require('validator');
 
 module.exports = {
-  _binRep: function (n, m) {
+  _binRep: function (n, slen) {
     // return capacity-padded binary representation of n
     n = n.toString(2);
-    n = '0'.repeat(this._getCapacity(m.length).toString(2).length - n.length) + n;
+    n = '0'.repeat(this._getCapacity(slen).toString(2).length - n.length) + n;
     return n;
   },
-  _getCapacity: function (m) {
+  _getCapacity: function (slen) {
     // return number of dot permutations for the given string length
-    return (Math.pow(2, m - 1) - 1);
+    return (Math.pow(2, slen - 1) - 1);
   },
   _splitMail: function (email) {
     // split email address into local and @domain parts
@@ -23,17 +23,17 @@ module.exports = {
 
     email = this._splitMail(email);
     // m = local part of email address
-    var m = email[0];
+    var local = email[0];
 
-    if (n > this._getCapacity(m.length)) return null;
+    if (n > this._getCapacity(local.length)) return null;
 
     // convert n to its capacity-padded binary representation
-    n = this._binRep(n, m);
+    n = this._binRep(n, local.length);
 
     // merge dots into m
     var result = '';
-    for (var i = 0; i < m.length; i++) {
-      result += m[i];
+    for (var i = 0; i < local.length; i++) {
+      result += local[i];
       if (n[i] === '1') {
         result += '.';
       }

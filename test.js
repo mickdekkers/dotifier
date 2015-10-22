@@ -40,13 +40,13 @@ describe('dotifier', function () {
   });
   describe('._binRep()', function () {
     it('should return \'000001\' when n = 1', function () {
-      expect(dotifier._binRep(1, 'example')).to.equal('000001');
+      expect(dotifier._binRep(1, 'example'.length)).to.equal('000001');
     });
     it('should return \'001010\' when n = 10', function () {
-      expect(dotifier._binRep(10, 'example')).to.equal('001010');
+      expect(dotifier._binRep(10, 'example'.length)).to.equal('001010');
     });
     it('should return \'001111\' when n = 15', function () {
-      expect(dotifier._binRep(15, 'example')).to.equal('001111');
+      expect(dotifier._binRep(15, 'example'.length)).to.equal('001111');
     });
   });
   describe('.encode()', function () {
