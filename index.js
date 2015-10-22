@@ -30,7 +30,7 @@ module.exports = {
     // convert n to its capacity-padded binary representation
     n = this._binRep(n, local.length);
 
-    // merge dots into m
+    // merge dots into local
     var result = '';
     for (var i = 0; i < local.length; i++) {
       result += local[i];
