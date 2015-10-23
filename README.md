@@ -2,20 +2,31 @@
 
 > Encode an integer into a Gmail address using dots
 
-
 ## Install
 
 ```
 $ npm install --save dotifier
 ```
 
-
 ## Usage
 
-```js
-// example.js
-var dotifier = require('dotifier');
+### Server
 
+```js
+var dotifier = require('dotifier');
+```
+
+### Client
+
+Dotifier can be loaded either directly, or using [AMD](http://requirejs.org/docs/whyamd.html).
+
+*Note: requires [validator.js](https://github.com/chriso/validator.js)*
+```html
+<script type="application/javascript" src="dotifier.js"></script>
+```
+
+Example usage:
+```js
 console.log(dotifier.encode('examplegmail@gmail.com', 1));
 //=> 'examplegmai.l@gmail.com'
 
