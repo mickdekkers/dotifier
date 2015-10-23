@@ -1,4 +1,4 @@
-# dotifier [![npm version](https://img.shields.io/npm/v/dotifier.svg?style=flat-square)](https://www.npmjs.com/package/dotifier) [![build status](https://img.shields.io/travis/SoullessWaffle/dotifier.svg?style=flat-square)](https://travis-ci.org/SoullessWaffle/dotifier)
+# dotifier [![npm version](https://img.shields.io/npm/v/dotifier.svg?style=flat-square)](https://www.npmjs.com/package/dotifier)[![build status](https://img.shields.io/travis/SoullessWaffle/dotifier.svg?style=flat-square)](https://travis-ci.org/SoullessWaffle/dotifier)
 
 > Encode an integer into a Gmail address using dots
 
