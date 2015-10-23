@@ -5,7 +5,7 @@ var expect, dotifier;
 if (typeof module === 'object' && module.exports) {
   // Node
   expect = require('chai').expect;
-  dotifier = require('./index.js');
+  dotifier = require('./dotifier.js');
 } else {
   // Browser
   expect = window.chai.expect;

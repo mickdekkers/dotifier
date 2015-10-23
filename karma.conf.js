@@ -41,7 +41,7 @@ module.exports = function (config) {
       'node_modules/mocha/mocha.js',
       'node_modules/chai/chai.js',
       'node_modules/validator/validator.js',
-      'index.js',
+      'dotifier.js',
       'test.js'
     ],
     sauceLabs: sauceLabs,

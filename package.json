@@ -27,7 +27,7 @@
       "email": "soullesswaffle@gmail.com"
     }
   ],
-  "main": "index.js",
+  "main": "dotifier.js",
   "engines": {
     "node": ">=4.0.0"
   },
