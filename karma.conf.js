@@ -24,7 +24,7 @@ module.exports = function (config) {
   };
   if (process.env.TRAVIS_JOB_NUMBER) {
     sauceLabs.startConnect = false;
-    sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER;
+    sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER.replace(/\./g, '_');
     sauceLabs.tags.push('ci');
     sauceLabs.tags.push(process.env.TRAVIS_BRANCH);
     sauceLabs.tags.push(process.env.TRAVIS_COMMIT.slice(0, 6));
