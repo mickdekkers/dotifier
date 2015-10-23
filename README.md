@@ -1,8 +1,6 @@
-# dotifier [![npm version](https://img.shields.io/npm/v/dotifier.svg?style=flat-square)](https://www.npmjs.com/package/dotifier)
+# dotifier [![npm version](https://img.shields.io/npm/v/dotifier.svg?style=flat-square)](https://www.npmjs.com/package/dotifier) [![build status](https://img.shields.io/travis/SoullessWaffle/dotifier.svg?style=flat-square)](https://travis-ci.org/SoullessWaffle/dotifier)
 
-[![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard) [![build status](https://img.shields.io/travis/SoullessWaffle/dotifier.svg?style=flat-square)](https://travis-ci.org/SoullessWaffle/dotifier)
-
-Encode an integer into a Gmail address using dots
+> Encode an integer into a Gmail address using dots
 
 ## Install
 
