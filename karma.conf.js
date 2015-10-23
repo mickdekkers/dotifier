@@ -19,12 +19,14 @@ module.exports = function (config) {
   };
 
   var sauceLabs = {
+    username: 'Soullesswaffle',
+    accessKey: '99ebc221-7542-4dc9-8e29-9a629d0b6cda',
     testName: 'Dotifier Browser Tests',
     tags: []
   };
   if (process.env.TRAVIS_JOB_NUMBER) {
     sauceLabs.startConnect = false;
-    sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER.replace(/\./g, '_');
+    sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER;
     sauceLabs.tags.push('ci');
     sauceLabs.tags.push(process.env.TRAVIS_BRANCH);
     sauceLabs.tags.push(process.env.TRAVIS_COMMIT.slice(0, 6));
