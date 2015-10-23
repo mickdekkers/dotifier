@@ -1,7 +1,15 @@
 /* global describe it */
 
-var expect = require('chai').expect;
-var dotifier = require('./index.js');
+var expect, dotifier;
+
+if (typeof module === 'object' && module.exports) {
+  // Node
+  expect = require('chai').expect;
+  dotifier = require('./index.js');
+} else {
+  // Browser
+  expect = window.chai.expect;
+}
 
 describe('dotifier', function () {
   describe('._splitMail()', function () {
@@ -59,28 +67,6 @@ describe('dotifier', function () {
       });
       it('should return e.x.a.m.p.l.e@gmail.com when n = 63', function () {
         expect(dotifier.encode('example@gmail.com', 63)).to.equal('e.x.a.m.p.l.e@gmail.com');
-      });
-    });
-    describe('binary', function () {
-      it('should return example@gmail.com when n = 0b0', function () {
-        expect(dotifier.encode('example@gmail.com', 0b0)).to.equal('example@gmail.com');
-      });
-      it('should return exampl.e@gmail.com when n = 0b1', function () {
-        expect(dotifier.encode('example@gmail.com', 0b1)).to.equal('exampl.e@gmail.com');
-      });
-      it('should return e.x.a.m.p.l.e@gmail.com when n = 0b111111', function () {
-        expect(dotifier.encode('example@gmail.com', 0b111111)).to.equal('e.x.a.m.p.l.e@gmail.com');
-      });
-    });
-    describe('octal', function () {
-      it('should return example@gmail.com when n = 0o0', function () {
-        expect(dotifier.encode('example@gmail.com', 0o0)).to.equal('example@gmail.com');
-      });
-      it('should return exampl.e@gmail.com when n = 0o1', function () {
-        expect(dotifier.encode('example@gmail.com', 0o1)).to.equal('exampl.e@gmail.com');
-      });
-      it('should return e.x.a.m.p.l.e@gmail.com when n = 0o77', function () {
-        expect(dotifier.encode('example@gmail.com', 0o77)).to.equal('e.x.a.m.p.l.e@gmail.com');
       });
     });
     describe('hexadecimal', function () {

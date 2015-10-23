@@ -32,13 +32,16 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "test": "node node_modules/semistandard/bin/cmd.js && mocha --reporter spec --ui bdd"
+    "test": "node node_modules/semistandard/bin/cmd.js && mocha --reporter spec --ui bdd && karma start"
   },
   "dependencies": {
     "validator": "^4.1.0"
   },
   "devDependencies": {
     "chai": "^3.3.0",
+    "karma": "^0.13.13",
+    "karma-mocha": "^0.2.0",
+    "karma-sauce-launcher": "^0.3.0",
     "mocha": "^2.3.3",
     "semistandard": "^7.0.2"
   }
