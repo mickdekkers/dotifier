@@ -35,7 +35,7 @@ module.exports = function (config) {
   } else {
     sauceLabs.tags.push('manual');
   }
-  console.log(sauceLabs.tags);
+  console.log('Sauce Labs tags:', sauceLabs.tags);
   config.set({
     files: [
       'node_modules/mocha/mocha.js',
